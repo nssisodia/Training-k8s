@@ -1,0 +1,15 @@
+Commands that you used during the assignment.
+
+=========================
+
+kubectl apply -f . 
+
+To delete vote vote pods
+kubectl delete po vote-****
+kubectl delete po worker-****
+kubectl delete po db-****
+
+kubectl get rs
+kubectl get deploy 
+kubectl get svc
+Kubectl logs work-……
