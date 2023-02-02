@@ -1,0 +1,25 @@
+
+=======================
+
+1. kubectl delete po vote-94849dc97-g5vlw
+
+vote-94849dc97-dfzz9 
+
+No impact on http://13.229.142.52:31001/ it is giving same results.
+
+=======================
+
+2. kubectl delete po worker-dd46d7584-xkdxd
+New pod is started : worker-dd46d7584-45m6t
+No impact on http://13.229.142.52:31001/ it is giving same results.
+
+=========================
+
+3. kubectl delete po db-b54cd94f4-5pvdg
+New pod is started : db-b54cd94f4-6k587 
+There is impact on http://13.229.142.52:31001/ it is giving as no votes on results.
+
+Also I see as worker-dd46d7584-45m6t is restarted on deleting db pod. Looks like it is because DB is cleared. On voting again it will start voting again.
+Alos result-5d57b59f4b-9mt9j is restarted.
+
+====================
